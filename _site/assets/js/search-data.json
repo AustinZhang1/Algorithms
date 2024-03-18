@@ -1,0 +1,97 @@
+{
+  
+
+  
+  
+
+  
+      "page1": {
+          "title": "About Us",
+          "content": "Creators of Alien World .",
+          "url": "http://localhost:4100/teacher_portfolio/about/",
+          "relUrl": "/about/",
+          "date": ""
+      }
+      
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+      ,"page6": {
+          "title": "",
+          "content": "Invert Idle Barking Walking",
+          "url": "http://localhost:4100/teacher_portfolio/navigation/game1.html",
+          "relUrl": "/navigation/game1.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page7": {
+          "title": "Platformer Game v2.1",
+          "content": "&times; Settings &times; Leaderboard . . . . . . Timer: 0 Start Game Restart Settings Leaderboard Fun Fact #0 . Mario is named after frustrated landlord, Mario Segale, of the Nintendo of America building. . .",
+          "url": "http://localhost:4100/teacher_portfolio/navigation/game2.html",
+          "relUrl": "/navigation/game2.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page8": {
+          "title": "Course Outlines",
+          "content": "| CSSE | CSP | CSA | Game1x | Game2x | . . Investing in Your Technical Future . Explore the Computer Science Pathway at Del Norte High School. All Del Norte CompSci classes are designed to provide a real-world development experience. Grading is focused on time invested, analytics, participation with peers, and engagement in learning. . Project-based learning with teacher support | Tech Talks by teacher complimented with Student Teaching | Course learning includes Coding Languages, DevOps, GitHub, Research and Creativity | Student teams practice Agile Development Methodologies: planning, communication, collaboration | Class lab time provided and approximately 2-3 hours of homework per week | .",
+          "url": "http://localhost:4100/teacher_portfolio/",
+          "relUrl": "/",
+          "date": ""
+      }
+      
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+      ,"page13": {
+          "title": "Time Box",
+          "content": "",
+          "url": "http://localhost:4100/teacher_portfolio/time/",
+          "relUrl": "/time/",
+          "date": ""
+      }
+      
+  
+
+  
+  
+
+  
+  
+
+  
+      ,"page16": {
+          "title": "Deployment Information",
+          "content": "Deployment Information . Change the Backend URL in GameEnv. For a secure “https” connection use “wss” instead of ws teacher_portfolio/assets/js/multiplayer/GameEnv.js . static socket = io(`ws://${window.location.host.split(&quot;:&quot;)[0]}:3000`); . Use the Dockerfile and docker-compose in node_backend to adjust the actual output port in the docker-compose In NGINX make sure to forward web socket traffic, here is an NGINX file from another project using socket.io. . server { server_name platformer_ws.nighthawkcodingsociety.com; location / { proxy_pass http://localhost:300; # this magic is needed for WebSocket proxy_http_version 1.1; proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection $connection_upgrade; proxy_set_header Host $http_host; proxy_set_header X-Real-IP $remote_addr; } } .",
+          "url": "http://localhost:4100/teacher_portfolio/node_backend/",
+          "relUrl": "/node_backend/",
+          "date": ""
+      }
+      
+  
+
+}
