@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Teacher 2.0 | August 2023 to June 2024</title>
+<title>IMPORTANT | Teacher 2.0</title>
 <meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="Teacher 2.0" />
+<meta property="og:title" content="IMPORTANT" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="August 2023 to June 2024" />
 <meta property="og:description" content="August 2023 to June 2024" />
@@ -15,9 +15,9 @@
 <meta property="og:site_name" content="Teacher 2.0" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Teacher 2.0" />
+<meta property="twitter:title" content="IMPORTANT" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"August 2023 to June 2024","headline":"Teacher 2.0","name":"Teacher 2.0","url":"http://localhost:4100/teacher_portfolio/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"August 2023 to June 2024","headline":"IMPORTANT","name":"Teacher 2.0","url":"http://localhost:4100/teacher_portfolio/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -69,190 +69,284 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p>&lt;!DOCTYPE html&gt;</p>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Property Search</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px; /* Added padding */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh; /* Changed height to min-height */
-      background-color: #f0f0f0;
-      background-image: url('https://www.transparentpng.com/thumb/clouds/cloud-clipart-kawaii-background-transparent.png');
-      background-repeat: repeat;
-      background-size: cover;
-    }
+        <div class="home"><h1 class="page-heading">IMPORTANT</h1><h1 id="important">IMPORTANT</h1>
 
-    .container {
-      max-width: 600px;
-      width: 100%;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+<p>This is a general help for NightHawk pages.</p>
 
-    .form-group {
-      margin-bottom: 20px;
-      text-align: left;
-    }
+<ul>
+  <li>
+    <p>Go to settings and configure pages, and configure Build and Deployment for “GitHub Actions”. IF YOU DO NOT DO THIS YOUR PAGE WILL NOT BUILD.</p>
+  </li>
+  <li>
+    <p>In case of issues with the user for your repository not being able to be resolved resulting in the page not building do the following: instead of the usual <code class="language-plaintext highlighter-rouge">repository: yourRepoName</code> in the repository section write <code class="language-plaintext highlighter-rouge">repository: usr/yourRepoName</code></p>
+  </li>
+  <li>
+    <p>Game projects use the minima theme.   To understand files and organization read <a href="https://github.com/jekyll/minima#readme">Minima README.md</a></p>
+  </li>
+</ul>
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
+<h2 id="file-names-in-_posts-_notebooks">File Names in “_posts”, “_notebooks”</h2>
 
-    input[type="number"],
-    select {
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      width: calc(100% - 18px);
-    }
+<ul>
+  <li>
+    <p>To name a file, use the following structure (Note that dates should never be in the future and should always be in the format YYYY-MM-DD):</p>
+  </li>
+  <li>
+    <p>Make sure that notebooks are in the notebook folder and posts are in the posts folder.</p>
 
-    input[type="text"] {
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      width: calc(100% - 18px);
-    }
+    <ul>
+      <li>For markdown files in _posts:
+        <ul>
+          <li>year-month-day-fileName.md
+            <ul>
+              <li>GOOD EXAMPLE: 2021-08-02-First-Day.md</li>
+              <li>BAD EXAMPLE: 2021-8-2-first-day.md</li>
+              <li>BAD EXAMPLE: first-day.md</li>
+              <li>BAD EXAMPLE: 2069-12-31-First-Day.md</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>For jupyter notebooks in _notebooks:
+        <ul>
+          <li>year-month-day-fileName.ipynb
+            <ul>
+              <li>GOOD EXAMPLE: 2021-08-02-First-Day.ipynb</li>
+              <li>BAD EXAMPLE: 2021-8-2-first-day.ipynb</li>
+              <li>BAD EXAMPLE: first-day.ipynb</li>
+              <li>BAD EXAMPLE: 2069-12-31-First-Day.ipynb</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-    button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+<h2 id="nighthawk-pages-changes">NIGHTHAWK-Pages CHANGES</h2>
 
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Welcome to Property Search</h1>
-    <form id="property-form">
-      <div class="form-group">
-        <label for="area">Area (Integer):</label>
-        <input type="number" id="area" name="area" required="" />
-      </div>
-      <div class="form-group">
-        <label for="bedrooms">Bedrooms (Integer):</label>
-        <input type="number" id="bedrooms" name="bedrooms" required="" />
-      </div>
-      <div class="form-group">
-        <label for="bathrooms">Bathrooms (Integer):</label>
-        <input type="number" id="bathrooms" name="bathrooms" required="" />
-      </div>
-      <div class="form-group">
-        <label for="stories">Stories (Integer):</label>
-        <input type="number" id="stories" name="stories" required="" />
-      </div>
-      <div class="form-group">
-        <label for="main-road">Main Road (Yes/No):</label>
-        <select id="main-road" name="main-road" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="guest-room">Guest Room (Yes/No):</label>
-        <select id="guest-room" name="guest-room" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="basement">Basement (Yes/No):</label>
-        <select id="basement" name="basement" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="hot-water-heating">Hot Water Heating (Yes/No):</label>
-        <select id="hot-water-heating" name="hot-water-heating" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="airconditioning">Air Conditioning (Yes/No):</label>
-        <select id="airconditioning" name="airconditioning" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="parking">Parking (Yes/No):</label>
-        <select id="parking" name="parking" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="pref-area">Preferred Area (Yes/No):</label>
-        <select id="pref-area" name="pref-area" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="furnishing-status">Furnishing Status (Yes/No):</label>
-        <select id="furnishing-status" name="furnishing-status" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <button type="button" onclick="submitForm()">Search</button>
-    </form>
-  </div>
+<h3 id="tags">TAGS</h3>
 
-  <script>
-    function submitForm() {
-      const formData = {
-        area: document.getElementById('area').value,
-        bedrooms: document.getElementById('bedrooms').value,
-        bathrooms: document.getElementById('bathrooms').value,
-        stories: document.getElementById('stories').value,
-        mainroad: document.getElementById('main-road').value === '1' ? 'yes' : 'no',
-        guestroom: document.getElementById('guest-room').value === '1' ? 'yes' : 'no',
-        basement: document.getElementById('basement').value === '1' ? 'yes' : 'no',
-        hotwaterheating: document.getElementById('hot-water-heating').value === '1' ? 'yes' : 'no',
-        airconditioning: document.getElementById('airconditioning').value === '1' ? 'yes' : 'no',
-        parking: document.getElementById('parking').value,
-        prefarea: document.getElementById('pref-area').value === '1' ? 'yes' : 'no',
-        furnishingstatus: document.getElementById('furnishing-status').value === '1' ? 'furnished' : 'unfurnished'
-      };
+<ul>
+  <li>Tags are used to organize pages by their tag the way to add tags is to add the following to your front matter such as the example seen here <code class="language-plaintext highlighter-rouge">categories: [</code>C1.4]` Each item in the same category will be lumped together to be seen easily on the tags page.</li>
+</ul>
 
-      const jsonOutput = JSON.stringify(formData);
-      console.log(jsonOutput);
-      fetch("http://127.0.0.1:8086/house/", {
-      method: "POST",
-      body: jsonOutput,
-      headers: {
-        "Content-type": "application/json; charset=UTF-8"
-      }
-});
-  console.log('OUR FRONTEND ACTUALLY WORKS????????????/')
-      // You can do whatever you want with the JSON data here, for example, send it to a server.
-    }
+<h3 id="search">SEARCH</h3>
 
-  </script>
-</body>
-</html>
+<ul>
+  <li>All pages can be searched for using the built-in search bar. This search bar will search for any word in the title of a page or in the page itself. This allows for easily finding pages and information that you are looking for. However, sometimes this may not be desirable so to hide a page from the search you can add <code class="language-plaintext highlighter-rouge">search_exclude: true</code> to the front matter of the page. This will hide the page from appearing when the viewer uses search.</li>
+</ul>
+
+<h3 id="navigation-bar">NAVIGATION BAR</h3>
+
+<ul>
+  <li>To add pages to the navigation bar add them to the general main directory then add the alpha tag that will order them in the way that you desire such as AA Being the first page and ZZ being the last page.</li>
+</ul>
+
+<h3 id="blog-page">BLOG PAGE</h3>
+
+<ul>
+  <li>There is a newly designed blog page with all pages having images and a description of what the page is about. This is to help the viewer understand what the page is about and what they can expect to find on the page. The way to add images to a page is to have the following front matter <code class="language-plaintext highlighter-rouge">image: /images/file.jpg</code> and then the name of the image that you want to use. The image must be in the <code class="language-plaintext highlighter-rouge">images</code> folder. Furthermore, if you would like the file to not show up on the blog page <code class="language-plaintext highlighter-rouge">hide: true</code> can be added to the front matter.</li>
+</ul>
+
+<h3 id="sass-support">SASS support</h3>
+
+<ul>
+  <li>NIGHTHAWK-Pages supports a variety of different themes that are each overlaid on top of minima. To use each theme, go to the “custom-styles.scss” file and simply uncomment the theme you want to use. To toggle the theme off, comment in front of the line that imports the theme in the file. To add your themes, find the desired theme’s GitHub repository and make a new folder in the sass directory that’s named the name of your theme. Copy the import statement format from the other styles on “custom-styles.scss”, add your import statement, and you’re done. Note that adding personal themes may cause things to break and a given theme’s compatibility with NIGHTHAWK-Pages may be suboptimal. To add a personal styling twist, add your unique .scss file to “custom-styles” via import. Here is an example import <code class="language-plaintext highlighter-rouge">@import "minima/NIGHTHAWK-Pages-styles";</code>. Note that you can also add your own SCSS in the file itself in the area labeled specifically for that purpose. Also, you can mix different styles by combining them together in NIGHTHAWK-Pages however the effects may vary.</li>
+</ul>
+
+<h3 id="includes">INCLUDES</h3>
+
+<ul>
+  <li>
+    <p>NIGHTHAWK-Pages uses liquid to import many common page elements that are present throughout the repository. These common elements are imported from the _includes directory. If you want to add one of these common elements, use liquid syntax to import the desired element to your file. Here’s an example of the liquid syntax used to import: `&lt;h3&gt;
+  <a class="post-link" href=""></a></p>
+
+    <p>&lt;/a&gt;</p>
+  </li>
+</ul>
+<p>&lt;/h3&gt;&lt;p class="post-meta"&gt;&lt;/p&gt;
+` Note that the liquid syntax is surrounded by curly braces and percent signs. This can be used anywhere in the repository.</p>
+
+<h3 id="layouts">LAYOUTS</h3>
+
+<ul>
+  <li>To create a custom page layout, make an HTML page inside the _layouts directory, and when you want to use that layout in a file, use the following front matter <code class="language-plaintext highlighter-rouge">layout: [your layout here]</code> Using another pre-existing layout use the same front matter syntax as defined above. This layout will have to be written in in logic customizing liquid to define the structure of the page.</li>
+</ul>
+
+<h3 id="configyml">CONFIG.YML</h3>
+
+<ul>
+  <li>NIGHTHAWK-Pages allows for social links to be added at the bottom of every page, along with other things. To change the pre-set social links and names, go to the _config.yml file and change the desired category to the desired nomenclature. There are only a few supported social links that you can choose from.</li>
+</ul>
+
+<h2 id="blog-site-using-github-pages-and-jekyll">Blog site using GitHub Pages and Jekyll</h2>
+
+<blockquote>
+  <p>This site is intended for Students.   This is to record plans, complete hacks, and do work for your learnings.</p>
+</blockquote>
+
+<ul>
+  <li>This can be customized to support computer science as you work through the pathway (JavaScript, Python/Flask, Java/Spring)</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>All tangible artifact work is in a _posts</td>
+          <td>_notebooks.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Front matter (aka metadata) in “.ipynb” and md files are used to organize information according to week and column in the running website.</li>
+</ul>
+
+<h2 id="github-pages">GitHub Pages</h2>
+
+<p>All <code class="language-plaintext highlighter-rouge">GitHub Pages</code> websites are managed on GitHub infrastructure. GitHub uses <code class="language-plaintext highlighter-rouge">Jekyll</code> to transform your content into static websites and blogs. Each time we change files in GitHub it initiates a GitHub Action that rebuilds and publishes the site with Jekyll.</p>
+
+<ul>
+  <li>GitHub Pages is powered by: <a href="https://jekyllrb.com/">Jekyll</a>.</li>
+  <li>Published teacher website: <a href="https://nighthawkcoders.github.io/teacher/">nighthawkcoders.github.io/teacher</a></li>
+</ul>
+
+<h2 id="preparing-a-preview-site">Preparing a Preview Site</h2>
+
+<p>In all development, it is recommended to test your code before deployment.  The GitHub Pages development process is optimized by testing your development on your local machine, before committing files to GitHub.</p>
+
+<p>Development Cycle. For GitHub pages, the tooling described below will support a development cycle, such as <code class="language-plaintext highlighter-rouge">make-code-save-preview</code>.  In the development cycle, it is a requirement to preview work locally, before doing a VSCode <code class="language-plaintext highlighter-rouge">commit</code> to git.  Preview functionality requires Python and Python libraries.</p>
+
+<p>Deployment Cycle.  In the deployment cycle, <code class="language-plaintext highlighter-rouge">sync-github-action-review</code>, it is a requirement to complete the development cycle before doing a VSCode <code class="language-plaintext highlighter-rouge">sync</code>.  The sync triggers a GitHub repository update.  The action starts with the Jekyll build to publish the website.  Any step can have errors and will require you to do a review of GitHub Actions.</p>
+
+<h3 id="wsl-andor-ubuntu-installation-requirements">WSL and/or Ubuntu installation requirements</h3>
+
+<ul>
+  <li>The result of these steps is Ubuntu tools to run the preview server.  These procedures were created using <a href="https://jekyllrb.com/docs/installation/ubuntu/">jekyllrb.com</a></li>
+  <li>Run scripts in the scripts directory of the student repo: activate_ubuntu.sh. The expected name of the repository to run these scripts is the name of the repo, ie ‘student’.</li>
+</ul>
+
+<h3 id="macos-installation-requirements">MacOs installation requirements</h3>
+
+<p>The result of these steps is MacOS tools to run the preview server.  These procedures were created using <a href="https://jekyllrb.com/docs/installation/macos/">jekyllrb.com</a>. Run scripts in the scripts directory of the student repo: activate_macos.sh. The expected name of the repository to run these scripts is ‘student’.</p>
+
+<h3 id="preview">Preview</h3>
+
+<ul>
+  <li>
+    <p>The result of these steps is the server running on: <a href="http://0.0.0.0:4100/teacher/">http://0.0.0.0:4100/teacher/</a>.  Regeneration messages will run in the terminal on any save.  Press the Enter or Return key in the terminal at any time to enter commands.</p>
+  </li>
+  <li>
+    <p>Complete installation</p>
+  </li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Run Server.  This requires running terminal commands <code class="language-plaintext highlighter-rouge">make</code>, <code class="language-plaintext highlighter-rouge">make stop</code>, <code class="language-plaintext highlighter-rouge">make clean</code>, or <code class="language-plaintext highlighter-rouge">make convert</code> to manage the running server.  Logging of details will appear in the terminal.   A <code class="language-plaintext highlighter-rouge">Makefile</code> has been created in the project to support commands and start processes.</p>
+
+    <ul>
+      <li>
+        <p>Start the preview server in the terminal
+The terminal output shows the server address. “Cmd” or “Ctl” click the http location to open the preview server in a browser. Example Server address message…</p>
+
+        <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Server address: http://0.0.0.0:4100/teacher/
+</code></pre></div>        </div>
+
+        <ul>
+          <li>Save on “.ipynb” or “.md” file activiates “regeneration”. Refresh the browser to see updates. Example terminal message…</li>
+        </ul>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Regenerating: 1 file(s) changed at 2023-07-31 06:54:32
+    _notebooks/2024-01-04-cockpit-setup.ipynb
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Terminal messages are generated from background processes.  Click return or enter to obtain a prompt and use the terminal as needed for other tasks.  Always return to the root of project <code class="language-plaintext highlighter-rouge">cd ~/vscode/teacher</code> for all “make” actions.</p>
+      </li>
+      <li>
+        <p>Stop the preview server, but leave constructed files in the project for your review.</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make stop
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Stop the server and “clean” constructed files, this is the best choice when renaming files to eliminate potential duplicates in constructed files.</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make clean
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Test notebook conversions, this is the best choice to see if IPYNB conversion is acting up.</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make convert
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Metadata, also known as “front matter”, is a set of key-value pairs that can provide additional information to GitHub Pages about .md and .ipynb files. This can and probably will be used in other file types (ie doc, pdf) if we add them to the system.</p>
+
+<ul>
+  <li>
+    <p>In the front matter, you can also define things like a title and description for the page.  Additional front matter is defined to place content on the “Computer Science Lab Notebook” page.  The <code class="language-plaintext highlighter-rouge">courses:</code> key will place data on a specific page with the nested <code class="language-plaintext highlighter-rouge">week:</code> placing data on a specific row on the page.  The <code class="language-plaintext highlighter-rouge">type:</code> key in “front matter” will place the blog under the plans, hacks(ToDo), and tangibles columns.</p>
+  </li>
+  <li>
+    <p>In our files, the front matter is defined at the top of the page or the first markdown cell.</p>
+
+    <ul>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>First, open one of the .md or .ipynb files already included in either your _posts</td>
+              <td>_notebooks folder.</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>In the .md file, you should notice something similar to this at the top of the page. To see this in your .ipynb files you will need to double-click the markdown cell at the top of the file.</li>
+    </ul>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">toc</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">comments</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Daily Plan Sample</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Example Blog!!!  This shows planning and notes from hacks.</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">plans</span>
+<span class="na">courses</span><span class="pi">:</span> <span class="pi">{</span> <span class="nv">compsci</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">week</span><span class="pi">:</span> <span class="nv">0</span><span class="pi">}</span> <span class="pi">}</span>
+<span class="nn">---</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>The front matter will always have ‘—’ at the top and bottom to distinguish it and each key-value pair will be separated by a ‘:’.</p>
+  </li>
+  <li>
+    <p>Here we can modify things like the title and description.</p>
+  </li>
+  <li>
+    <p>The type value will tell us which column this is going to appear under, supported values: <code class="language-plaintext highlighter-rouge">plans</code>, <code class="language-plaintext highlighter-rouge">hacks</code>, <code class="language-plaintext highlighter-rouge">tangibles</code>.</p>
+  </li>
+  <li>
+    <p>The courses will tell us which menu item it will be under, in this case, the <code class="language-plaintext highlighter-rouge">compsci</code> menu, and the <code class="language-plaintext highlighter-rouge">week</code> tells it what row (week) it will appear under that menu.</p>
+  </li>
+  <li>
+    <p>In our examples,  hacks(ToDo) contain references to our IPYNB files; these are stored in GitHub under the <code class="language-plaintext highlighter-rouge">_notebooks</code> folder.   The plans and tangibles contain references to our MD files; these are stored in GitHub under the <code class="language-plaintext highlighter-rouge">_posts</code> folder.</p>
+  </li>
+</ul>
+
+<h3 id="key-files-in-computer-science-lab-notebook">Key files in Computer Science Lab Notebook</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">compsci.md</code> - this is the “Computer Science Lab Notebook” page and is the link <code class="language-plaintext highlighter-rouge">https://nighthawkcoders.github.io/student/compsci</code>.  It contains the Title and Number of units on the page.</li>
+  <li><code class="language-plaintext highlighter-rouge">_data/compsci.yml</code> - this contains the supporting data that helps organize the units on the page.</li>
+  <li><code class="language-plaintext highlighter-rouge">_layouts</code>\schedule.html - this contains code, in the Liquid language, that generates the HTML for all the rows and columns.</li>
+  <li>FYI, the schedule.html could work for another type of page.  For instance, you could make a csa.md, _data/csa.yml, and tag files with <code class="language-plaintext highlighter-rouge">csa: {week: 0}</code> under courses.</li>
+</ul>
 
 
 

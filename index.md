@@ -1,6 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+---
+comments: True
+layout: base
+title: I am under the watha
+permalink: /house-price
+---
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Property Search</title>
@@ -18,7 +21,6 @@
       background-repeat: repeat;
       background-size: cover;
     }
-
     .container {
       max-width: 600px;
       width: 100%;
@@ -28,17 +30,14 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
     .form-group {
       margin-bottom: 20px;
       text-align: left;
     }
-
     label {
       display: block;
       margin-bottom: 5px;
     }
-
     input[type="number"],
     select {
       padding: 8px;
@@ -46,14 +45,12 @@
       border: 1px solid #ccc;
       width: calc(100% - 18px);
     }
-
     input[type="text"] {
       padding: 8px;
       border-radius: 5px;
       border: 1px solid #ccc;
       width: calc(100% - 18px);
     }
-
     button {
       padding: 10px 20px;
       background-color: #007bff;
@@ -63,12 +60,10 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-
     button:hover {
       background-color: #0056b3;
     }
   </style>
-</head>
 <body>
   <div class="container">
     <h1>Welcome to Property Search</h1>
@@ -174,11 +169,17 @@
       headers: {
         "Content-type": "application/json; charset=UTF-8"
       }
-});
+      })
+      .then(response => response.json())
+      .then(data => {
+            // Handle successful response here
+            console.log(data);  
+            })
+      
+    
   console.log('OUR FRONTEND ACTUALLY WORKS????????????/')
       // You can do whatever you want with the JSON data here, for example, send it to a server.
     }
 
   </script>
 </body>
-</html>
