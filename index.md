@@ -173,7 +173,7 @@ permalink: /house-price
       .then(response => response.json())
       .then(data => {
             // Handle successful response here
-            console.log(data);
+            window.alert("The predicted price is: " + data);
             })
       
     
