@@ -1,5 +1,5 @@
 ---
-comments: True
+comments: False
 layout: base
 title: I am under the watha
 permalink: /house-price
@@ -143,6 +143,9 @@ permalink: /house-price
       <button type="button" onclick="submitForm()">Search</button>
     </form>
   </div>
+    <div>
+        <button class="buttontest">Test</button>
+    </div>
 
   <script>
     function submitForm() {
