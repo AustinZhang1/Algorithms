@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="ML plans" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Ideation for Machine Learning Project -" />
-<meta property="og:description" content="Ideation for Machine Learning Project -" />
+<meta name="description" content="Ideation for Machine Learning Project" />
+<meta property="og:description" content="Ideation for Machine Learning Project" />
 <link rel="canonical" href="http://localhost:4100/teacher_portfolio/2024/03/18/ML-plans.html" />
 <meta property="og:url" content="http://localhost:4100/teacher_portfolio/2024/03/18/ML-plans.html" />
 <meta property="og:site_name" content="Teacher 2.0" />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="ML plans" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-18T00:00:00-07:00","datePublished":"2024-03-18T00:00:00-07:00","description":"Ideation for Machine Learning Project -","headline":"ML plans","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/2024/03/18/ML-plans.html"},"url":"http://localhost:4100/teacher_portfolio/2024/03/18/ML-plans.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-18T00:00:00-07:00","datePublished":"2024-03-18T00:00:00-07:00","description":"Ideation for Machine Learning Project","headline":"ML plans","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/2024/03/18/ML-plans.html"},"url":"http://localhost:4100/teacher_portfolio/2024/03/18/ML-plans.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -87,16 +87,52 @@ window.onload = wrap_img;
 
     </header>
 
-  <div class="post-content e-content" itemprop="articleBody"><h1 id="ideation-for-machine-learning-project--">Ideation for Machine Learning Project -</h1>
+  <div class="post-content e-content" itemprop="articleBody"><h1 id="ideation-for-machine-learning-project"><span style="color:white">Ideation for Machine Learning Project</span></h1>
 
-<p>1: Pull data from the Kaggle dataset. link: https://www.kaggle.com/datasets/yasserh/housing-prices-dataset. Our dataset will be a set of house information and data.</p>
+<ol>
+  <li>
+    <p><strong><span style="color:white">Pull data from the Kaggle dataset.</span></strong> <a href="https://www.kaggle.com/datasets/yasserh/housing-prices-dataset">Dataset Link</a><br />
+<span style="color:white">Our dataset will consist of house information and data.</span></p>
+  </li>
+  <li><strong><span style="color:white">Clean Data:</span></strong>
+    <ul>
+      <li><span style="color:white">Preprocess the data by handling missing values (imputation or removal).</span></li>
+      <li><span style="color:white">Encode categorical variables.</span></li>
+      <li><span style="color:white">Scale numerical features if necessary.</span> 
+<span style="color:white">This step ensures the data is ready for modeling.</span></li>
+    </ul>
+  </li>
+  <li><strong><span style="color:white">Create Model using Logistic Regression:</span></strong>
+    <ul>
+      <li><span style="color:white">Import the logistic regression model from scikit-learn.</span></li>
+      <li><span style="color:white">Define our features (X) and target variable (y).</span></li>
+      <li><span style="color:white">Split the data into training and testing sets.</span></li>
+      <li><span style="color:white">Fit the model on the training data.</span></li>
+    </ul>
+  </li>
+  <li><strong><span style="color:white">Train + Optimize Model:</span></strong>
+    <ul>
+      <li><span style="color:white">Train the logistic regression model on the training set.</span></li>
+      <li><span style="color:white">Optimize it by tuning hyperparameters using techniques like grid search or randomized search.</span></li>
+      <li><span style="color:white">Use cross-validation to evaluate the model’s performance.</span></li>
+    </ul>
+  </li>
+  <li><strong><span style="color:white">Run Model:</span></strong>
+    <ul>
+      <li><span style="color:white">Once the model is trained and optimized, evaluate its performance on the test set using metrics like accuracy, precision, recall, or F1-score.</span></li>
+      <li><span style="color:white">Use the model to make predictions on new data if needed.</span></li>
+    </ul>
+  </li>
+  <li><strong><span style="color:white">Frontend + Backend:</span></strong>
+    <ul>
+      <li><span style="color:white">Accept user data from the frontend and send it to the backend.</span></li>
+      <li><span style="color:white">Apply the actual model on the data in the backend.</span></li>
+      <li><span style="color:white">Predict an output and send it to the frontend.</span></li>
+    </ul>
+  </li>
+</ol>
 
-<p>2: Clean Data: Preprocess the data by handling missing values (imputation or removal), encoding categorical variables, and scaling numerical features if necessary. This step ensures the data is ready for modeling.
-Create Model using Logistic Regression: Import the logistic regression model from scikit-learn, define our features (X) and target variable (y), split the data into training and testing sets, then fit the model on the training data.
-Train + Optimize Model: Train the logistic regression model on the training set and optimize it by tuning hyperparameters using techniques like grid search or randomized search. Use cross-validation to evaluate the model’s performance.
-Run Model: Once the model is trained and optimized, evaluate its performance on the test set using metrics like accuracy, precision, recall, or F1-score. Use the model to make predictions on new data if needed.
-Frontend + Backend: We plan to accept user data from the frontend send it to the backend where the actual model is applied on the data where it then predicts an output and sends it to the frontend.
-Current Coding Repo: (Github Link)[https://github.com/hanlunli/ML-Project]</p>
+<p><strong><span style="color:white">Current Coding Repo:</span></strong> <a href="https://github.com/hanlunli/ML-Project">GitHub Link</a></p>
 
   </div><a class="u-url" href="/teacher_portfolio/2024/03/18/ML-plans.html" hidden></a>
 </article>
