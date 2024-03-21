@@ -149,7 +149,7 @@ window.onload = wrap_img;
     .stories {
         top: 80%
     }
-    .mainroad, .guestroom, .airconditioning, .parking, .prefarea, .furnishing {
+    .mainroad, .guestroom, .basement, .hotwater, .airconditioning, .parking, .prefarea, .furnishing {
         position: fixed;
         text-align: left;
         left: 70%;
@@ -167,8 +167,14 @@ window.onload = wrap_img;
     .guestroom {
         top: 35%
     }
-    .airconditioning {
+    .basement {
         top: 50%
+    }
+    .hotwater {
+        top: 55%
+    }
+    .airconditioning {
+        top: 60%
     }
     .parking {
         top: 65%
@@ -200,36 +206,48 @@ window.onload = wrap_img;
     </div>
     <div class="mainroad">
       <label>Main Road:</label>
-      <button id="main-road-yes" class="toggle-button" onclick="togglebutton('main')">Yes</button>
+      <button id="main-road-yes" class="toggle-button" onclick="togglebutton('main')">No</button>
     </div>
     <div class="guestroom">
       <label>Guest Room:</label>
       <div id="guest-room-buttons" class="button-group">
-        <button id="guest-room-yes" class="toggle-button" onclick="togglebutton('guest')">Yes</button>
+        <button id="guest-room-yes" class="toggle-button" onclick="togglebutton('guest')">No</button>
+      </div>
+    </div>
+    <div class="hotwater">
+      <label>Hot Water:</label>
+      <div id="hotwater-buttons" class="button-group">
+        <button id="hotwater-yes" class="toggle-button" onclick="togglebutton('hotwater')">No</button>
+      </div>
+    </div>
+    <div class="basement">
+      <label>Basement:</label>
+      <div id="basement-buttons" class="button-group">
+        <button id="basement-yes" class="toggle-button" onclick="togglebutton('basement')">No</button>
       </div>
     </div>
     <div class="airconditioning">
     <label>Air Conditioning:</label>
     <div id="airconditioning-buttons" class="button-group">
-        <button id="airconditioning-yes" class="toggle-button" onclick="togglebutton('airconditioning')">Yes</button>
+        <button id="airconditioning-yes" class="toggle-button" onclick="togglebutton('airconditioning')">No</button>
     </div>
 </div>
     <div class="parking">
         <label>Parking:</label>
         <div id="parking-buttons" class="button-group">
-            <button id="parking-yes" class="toggle-button" onclick="togglebutton('parking')">Yes</button>
+            <button id="parking-yes" class="toggle-button" onclick="togglebutton('parking')">No</button>
         </div>
     </div>
     <div class="prefarea">
         <label>Preferred Area:</label>
         <div id="pref-area-buttons" class="button-group">
-            <button id="pref-area-yes" class="toggle-button" onclick="togglebutton('prefarea')">Yes</button>
+            <button id="pref-area-yes" class="toggle-button" onclick="togglebutton('prefarea')">No</button>
         </div>
     </div>
     <div class="furnishing">
         <label>Furnishing Status:</label>
         <div id="furnishing-status-buttons" class="button-group">
-            <button id="furnishing-status-yes" class="toggle-button" onclick="togglebutton('furnishing')">Yes</button>
+            <button id="furnishing-status-yes" class="toggle-button" onclick="togglebutton('furnishing')">No</button>
         </div>
     </div>
     <button type="button" onclick="submitForm()">Search</button>
@@ -250,27 +268,67 @@ window.onload = wrap_img;
         if (buttonname === 'main') {
             mainroad = !mainroad;
             console.log(mainroad)
+            if (mainroad == false) {
+                document.getElementById("main-road-yes").innerText = "No"}
+            else if (mainroad == true) {
+                document.getElementById("main-road-yes").innerText = "Yes"
+            }
         } else if (buttonname === 'guest') {
             guestroom = !guestroom;
             console.log(guestroom)
+            if (guestroom == false) {
+                document.getElementById("guest-room-yes").innerText = "No"}
+            else if (guestroom == true) {
+                document.getElementById("guest-room-yes").innerText = "Yes"
+            }
         } else if (buttonname === 'basement') {
             basement = !basement;
             console.log(basement)
+            if (basement == false) {
+                document.getElementById("basement-yes").innerText = "No"}
+            else if (basement == true) {
+                document.getElementById("basement-yes").innerText = "Yes"
+            }
         } else if (buttonname === 'hotwater') {
             hotwater = !hotwater;
             console.log(hotwater)
+            if (hotwater == false) {
+                document.getElementById("hotwater-yes").innerText = "No"}
+            else if (hotwater == true) {
+                document.getElementById("hotwater-yes").innerText = "Yes"
+            }
         } else if (buttonname === 'airconditioning') {
             airconditioning = !airconditioning;
             console.log(airconditioning)
+            if (airconditioning == false) {
+                document.getElementById("airconditioning-yes").innerText = "No"}
+            else if (airconditioning == true) {
+                document.getElementById("airconditioning-yes").innerText = "Yes"
+            }
         } else if (buttonname === 'parking') {
             parking = !parking;
             console.log(parking)
+            if (parking == false) {
+                document.getElementById("parking-yes").innerText = "No"}
+            else if (parking == true) {
+                document.getElementById("parking-yes").innerText = "Yes"
+            }
         } else if (buttonname === 'prefarea') {
             prefarea = !prefarea;
             console.log(prefarea)
+            if (prefarea == false) {
+                document.getElementById("prefarea-yes").innerText = "No"}
+            else if (prefarea == true) {
+                document.getElementById("prefarea-yes").innerText = "Yes"
+            }
         } else if (buttonname === 'furnishing') {
             furnishing = !furnishing;
             console.log(furnishing)
+            if (furnishing == false) {
+                document.getElementById("furnishing-yes").innerText = "No"}
+            else if (furnishing == true) {
+                document.getElementById("furnishing-yes").innerText = "Yes"
+            }
         }
     }
 

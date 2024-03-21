@@ -70,7 +70,7 @@
   
       ,"page9": {
           "title": "I am under the watha",
-          "content": "Property Search . Area (Integer): Bedrooms (Integer): Bathrooms (Integer): Stories (Integer): Main Road: Yes Guest Room: Yes Air Conditioning: Yes Parking: Yes Preferred Area: Yes Furnishing Status: Yes Search .",
+          "content": "Property Search . Area (Integer): Bedrooms (Integer): Bathrooms (Integer): Stories (Integer): Main Road: No Guest Room: No Hot Water: No Basement: No Air Conditioning: No Parking: No Preferred Area: No Furnishing Status: No Search .",
           "url": "http://localhost:4100/teacher_portfolio/house-price",
           "relUrl": "/house-price",
           "date": ""
