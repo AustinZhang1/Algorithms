@@ -188,7 +188,57 @@ window.onload = wrap_img;
     .furnishing {
         top: 80%;
     }
-  </style>
+  /* Modal styles */
+/* Updated modal styles */
+/* Updated modal styles with flexbox */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    width: 45%; 
+    height: 45%; 
+    border-radius: 30px;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); /* Updated background color */
+    color: white; /* Text color */
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    font-size: 50px;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal-content {
+    background-color: black; /* Updated modal background color */
+    margin: 0; /* No margin */
+    padding: 20px;
+    border: 3px; /* No border */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+}
+/* Close button */
+.close {
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px; /* Adjust this value as needed */
+}
+.close:hover,
+.close:focus {
+    color: white; /* Close button hover/focus color */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+</style>
 </head>
 <body>
     <div class="area">
@@ -251,12 +301,17 @@ window.onload = wrap_img;
             <button id="furnishing-yes" class="toggle-button" onclick="togglebutton('furnishing')">No</button>
         </div>
     </div>
-    <button type="button" class="search" onclick="submitForm()">SEARCH</button>
-
+    <button type="button" class="search" onclick="submitForm()">Search</button>
+  <div id="myModal" class="modal">
+  <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p id="modalData">Variable Data Goes Here</p>
+    </div>
+  </div>
   <script>
     var mainroad = false;guestroom = false;basement = false;hotwater = false;airconditioning = false; prefarea = false;furnishing = false;
     const toggleButtons = document.querySelectorAll('.toggle-button');
-
     toggleButtons.forEach(button => {
       button.addEventListener('click', function() {
         const siblingButton = this.id.includes('yes') ? this.nextElementSibling : this.previousElementSibling;
@@ -264,7 +319,6 @@ window.onload = wrap_img;
         siblingButton.classList.remove('selected');
       });
     });
-
     function togglebutton(buttonname) {
         if (buttonname === 'main') {
             mainroad = !mainroad;
@@ -324,7 +378,26 @@ window.onload = wrap_img;
             }
         }
     }
-
+    function openModal(data) {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "block";
+    // Here you can set the variable data to be displayed in the modal
+    var variableData = "Your House Price is: " + data;
+    document.getElementById("modalData").innerText = variableData;
+  }
+  // Function to close the modal
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+  // Close the modal when clicking outside of it
+  window.onclick = function(event) {
+    var modal = document.getElementById("myModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  closeModal()
     function submitForm() {
       const formData = {
         area: document.getElementById('area').value,
@@ -340,7 +413,6 @@ window.onload = wrap_img;
         prefarea: prefarea === true ? 'yes' : 'no',
         furnishingstatus: furnishing === true ? 'furnished' : 'unfurnished'
       };
-      
       const jsonOutput = JSON.stringify(formData);
       console.log(jsonOutput);
       fetch("http://127.0.0.1:8086/house/", {
@@ -353,10 +425,8 @@ window.onload = wrap_img;
       .then(response => response.json())
       .then(data => {
             // Handle successful response here
-            window.alert("The predicted price is: " + data);
+            openModal(data);
             })
-      
-    
   console.log('OUR FRONTEND ACTUALLY WORKS????????????/')
       // You can do whatever you want with the JSON data here, for example, send it to a server.
     }
