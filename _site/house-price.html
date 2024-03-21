@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en-US"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,29 +52,17 @@ window.onload = wrap_img;
     });
 </script>
 </head>
-<body><header class="site-header">
+<body>
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/teacher_portfolio/">Teacher 2.0</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
+  <div class="wrapper">
 
-        <div class="trigger"><a class="page-link" href="/teacher_portfolio/blogs/">Blogs</a><a class="page-link" href="/teacher_portfolio/search/">Search</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <meta charset="UTF-8" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Property Search</title>
-<style>
+    <section>
+      <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Search</title>
+  <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -106,12 +94,6 @@ window.onload = wrap_img;
       margin-bottom: 5px;
     }
     input[type="number"],
-    select {
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      width: calc(100% - 18px);
-    }
     input[type="text"] {
       padding: 8px;
       border-radius: 5px;
@@ -119,119 +101,195 @@ window.onload = wrap_img;
       width: calc(100% - 18px);
     }
     button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
+      padding: 8px;
       border-radius: 5px;
+      border: 1px solid #ccc;
       cursor: pointer;
       transition: background-color 0.3s ease;
+    }
+    button.selected {
+      background-color: #007bff;
+      color: #fff;
     }
     button:hover {
       background-color: #0056b3;
     }
+    .buttontest {
+        position: fixed;
+        top: 80%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(128, 128, 128, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-size: 30px;
+        font-family: Verdana, sans-serif;
+    }
+    .area, .bedrooms, .bathrooms, .stories{
+        position: fixed;
+        text-align: left;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(128, 128, 128, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-size: 30px;
+        font-family: Verdana, sans-serif;
+    }
+    .area {
+        top: 20%;
+    }
+    .bedrooms {
+        top: 40%;
+    }
+    .bathrooms {
+        top: 60%
+    }
+    .stories {
+        top: 80%
+    }
+    .mainroad, .guestroom, .airconditioning, .parking, .prefarea, .furnishing {
+        position: fixed;
+        text-align: left;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(128, 128, 128, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-size: 20px;
+        font-family: Verdana, sans-serif;
+    }
+    .mainroad {
+        top: 20%
+    }
+    .guestroom {
+        top: 35%
+    }
+    .airconditioning {
+        top: 50%
+    }
+    .parking {
+        top: 65%
+    }
+    .prefarea {
+        top: 80%
+    }
+    .furnishing {
+        top: 95%
+    }
   </style>
-
+</head>
 <body>
-  <div class="container">
-    <h1>Welcome to Property Search</h1>
-    <form id="property-form">
-      <div class="form-group">
-        <label for="area">Area (Integer):</label>
-        <input type="number" id="area" name="area" required="" />
-      </div>
-      <div class="form-group">
-        <label for="bedrooms">Bedrooms (Integer):</label>
-        <input type="number" id="bedrooms" name="bedrooms" required="" />
-      </div>
-      <div class="form-group">
-        <label for="bathrooms">Bathrooms (Integer):</label>
-        <input type="number" id="bathrooms" name="bathrooms" required="" />
-      </div>
-      <div class="form-group">
-        <label for="stories">Stories (Integer):</label>
-        <input type="number" id="stories" name="stories" required="" />
-      </div>
-      <div class="form-group">
-        <label for="main-road">Main Road (Yes/No):</label>
-        <select id="main-road" name="main-road" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="guest-room">Guest Room (Yes/No):</label>
-        <select id="guest-room" name="guest-room" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="basement">Basement (Yes/No):</label>
-        <select id="basement" name="basement" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="hot-water-heating">Hot Water Heating (Yes/No):</label>
-        <select id="hot-water-heating" name="hot-water-heating" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="airconditioning">Air Conditioning (Yes/No):</label>
-        <select id="airconditioning" name="airconditioning" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="parking">Parking (Yes/No):</label>
-        <select id="parking" name="parking" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="pref-area">Preferred Area (Yes/No):</label>
-        <select id="pref-area" name="pref-area" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="furnishing-status">Furnishing Status (Yes/No):</label>
-        <select id="furnishing-status" name="furnishing-status" required="">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-      </div>
-      <button type="button" onclick="submitForm()">Search</button>
-    </form>
-  </div>
-    <div>
-        <button class="buttontest">Test</button>
+    <div class="area">
+      <label for="area">Area (Integer):</label>
+      <input type="number" id="area" name="area" required="" />
     </div>
+    <div class="bedrooms">
+      <label for="bedrooms">Bedrooms (Integer):</label>
+      <input type="number" id="bedrooms" name="bedrooms" required="" />
+    </div>
+    <div class="bathrooms">
+      <label for="bathrooms">Bathrooms (Integer):</label>
+      <input type="number" id="bathrooms" name="bathrooms" required="" />
+    </div>
+    <div class="stories">
+      <label for="stories">Stories (Integer):</label>
+      <input type="number" id="stories" name="stories" required="" />
+    </div>
+    <div class="mainroad">
+      <label>Main Road:</label>
+      <button id="main-road-yes" class="toggle-button" onclick="togglebutton('main')">Yes</button>
+    </div>
+    <div class="guestroom">
+      <label>Guest Room:</label>
+      <div id="guest-room-buttons" class="button-group">
+        <button id="guest-room-yes" class="toggle-button" onclick="togglebutton('guest')">Yes</button>
+      </div>
+    </div>
+    <div class="airconditioning">
+    <label>Air Conditioning:</label>
+    <div id="airconditioning-buttons" class="button-group">
+        <button id="airconditioning-yes" class="toggle-button" onclick="togglebutton('airconditioning')">Yes</button>
+    </div>
+</div>
+    <div class="parking">
+        <label>Parking:</label>
+        <div id="parking-buttons" class="button-group">
+            <button id="parking-yes" class="toggle-button" onclick="togglebutton('parking')">Yes</button>
+        </div>
+    </div>
+    <div class="prefarea">
+        <label>Preferred Area:</label>
+        <div id="pref-area-buttons" class="button-group">
+            <button id="pref-area-yes" class="toggle-button" onclick="togglebutton('prefarea')">Yes</button>
+        </div>
+    </div>
+    <div class="furnishing">
+        <label>Furnishing Status:</label>
+        <div id="furnishing-status-buttons" class="button-group">
+            <button id="furnishing-status-yes" class="toggle-button" onclick="togglebutton('furnishing')">Yes</button>
+        </div>
+    </div>
+    <button type="button" onclick="submitForm()">Search</button>
 
   <script>
+    var mainroad = false;guestroom = false;basement = false;hotwater = false;airconditioning = false;parking = false; prefarea = false;furnishing = false;
+    const toggleButtons = document.querySelectorAll('.toggle-button');
+
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const siblingButton = this.id.includes('yes') ? this.nextElementSibling : this.previousElementSibling;
+        this.classList.add('selected');
+        siblingButton.classList.remove('selected');
+      });
+    });
+
+    function togglebutton(buttonname) {
+        if (buttonname === 'main') {
+            mainroad = !mainroad;
+            console.log(mainroad)
+        } else if (buttonname === 'guest') {
+            guestroom = !guestroom;
+            console.log(guestroom)
+        } else if (buttonname === 'basement') {
+            basement = !basement;
+            console.log(basement)
+        } else if (buttonname === 'hotwater') {
+            hotwater = !hotwater;
+            console.log(hotwater)
+        } else if (buttonname === 'airconditioning') {
+            airconditioning = !airconditioning;
+            console.log(airconditioning)
+        } else if (buttonname === 'parking') {
+            parking = !parking;
+            console.log(parking)
+        } else if (buttonname === 'prefarea') {
+            prefarea = !prefarea;
+            console.log(prefarea)
+        } else if (buttonname === 'furnishing') {
+            furnishing = !furnishing;
+            console.log(furnishing)
+        }
+    }
+
     function submitForm() {
       const formData = {
         area: document.getElementById('area').value,
         bedrooms: document.getElementById('bedrooms').value,
         bathrooms: document.getElementById('bathrooms').value,
         stories: document.getElementById('stories').value,
-        mainroad: document.getElementById('main-road').value === '1' ? 'yes' : 'no',
-        guestroom: document.getElementById('guest-room').value === '1' ? 'yes' : 'no',
-        basement: document.getElementById('basement').value === '1' ? 'yes' : 'no',
-        hotwaterheating: document.getElementById('hot-water-heating').value === '1' ? 'yes' : 'no',
-        airconditioning: document.getElementById('airconditioning').value === '1' ? 'yes' : 'no',
-        parking: document.getElementById('parking').value,
-        prefarea: document.getElementById('pref-area').value === '1' ? 'yes' : 'no',
-        furnishingstatus: document.getElementById('furnishing-status').value === '1' ? 'furnished' : 'unfurnished'
+        mainroad: mainroad === true ? 'yes' : 'no',
+        guestroom: guestroom === true ? 'yes' : 'no',
+        basement: basement === true ? 'yes' : 'no',
+        hotwaterheating: hotwater === true ? 'yes' : 'no',
+        airconditioning: airconditioning === true ? 'yes' : 'no',
+        parking: parking === true ? 'yes' : 'no',
+        prefarea: prefarea === true ? 'yes' : 'no',
+        furnishingstatus: furnishing === true ? 'yes' : 'no'
       };
-
+      
       const jsonOutput = JSON.stringify(formData);
       console.log(jsonOutput);
       fetch("http://127.0.0.1:8086/house/", {
@@ -251,45 +309,15 @@ window.onload = wrap_img;
   console.log('OUR FRONTEND ACTUALLY WORKS????????????/')
       // You can do whatever you want with the JSON data here, for example, send it to a server.
     }
-
+    
   </script>
 </body>
+</html>
 
-      </div>
-    </main><footer class="site-footer h-card">
-    <data class="u-url" href="/teacher_portfolio/"></data>
-  
-    <div class="wrapper">
-  
-      <div class="footer-col-wrapper">
-  
-        <div class="social-links"><ul class="social-media-list"><li>
-  <a rel="me" href="https://github.com/nighthawkcoders/teacher_portfolio" target="_blank" title="github">
-    <svg class="svg-icon grey">
-      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#github"></use>
-    </svg>
-  </a>
-</li>
-<li>
-  <a rel="me" href="https://x.com/NighthawkCoding/" target="_blank" title="x">
-    <svg class="svg-icon grey">
-      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#x"></use>
-    </svg>
-  </a>
-</li>
-<li>
-  <a rel="me" href="https://www.youtube.com/@nighthawkcodingsociety2868" target="_blank" title="youtube">
-    <svg class="svg-icon grey">
-      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#youtube"></use>
-    </svg>
-  </a>
-</li>
-</ul>
-</div>
+    </section>
 
-      </div>
-    </div>
-  
-  </footer></body>
+  </div>
+</body>
+
 
 </html>
