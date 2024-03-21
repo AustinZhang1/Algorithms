@@ -61,14 +61,14 @@ permalink: /house-price
     button:hover {
       background-color: #0056b3;
     }
-    .buttontest {
+    .search {
         position: fixed;
-        top: 80%;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(128, 128, 128, 1);
+        background-color: rgba(235, 100, 100, 1) !important;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         font-size: 30px;
         font-family: Verdana, sans-serif;
     }
@@ -198,7 +198,7 @@ permalink: /house-price
             <button id="furnishing-yes" class="toggle-button" onclick="togglebutton('furnishing')">No</button>
         </div>
     </div>
-    <button type="button" onclick="submitForm()">Search</button>
+    <button type="button" class="search" onclick="submitForm()">SEARCH</button>
 
   <script>
     var mainroad = false;guestroom = false;basement = false;hotwater = false;airconditioning = false; prefarea = false;furnishing = false;
