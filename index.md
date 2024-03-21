@@ -65,7 +65,7 @@ permalink: /house-price
         position: fixed;
         top: 80%;
         transform: translate(-50%, -50%);
-        background-color: rgba(128, 128, 128, 0.5);
+        background-color: rgba(128, 128, 128, 1);
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -77,7 +77,7 @@ permalink: /house-price
         text-align: left;
         left: 30%;
         transform: translate(-50%, -50%);
-        background-color: rgba(128, 128, 128, 0.5);
+        background-color: rgba(55, 55, 55, 0.7);
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -104,7 +104,7 @@ permalink: /house-price
         text-align: left;
         left: 70%;
         transform: translate(-50%, -50%);
-        background-color: rgba(128, 128, 128, 0.5);
+        background-color: rgba(55, 55, 55, 0.7);
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
