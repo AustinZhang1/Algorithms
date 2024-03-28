@@ -2,7 +2,6 @@
 comments: False
 layout: default
 title: I am under the watha
-permalink: /house-price
 ---
 <html lang="en">
 <head>
