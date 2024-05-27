@@ -26,16 +26,13 @@ def csv_to_dict(csv_file):
 csv_file = 'nba.csv'
 data = csv_to_dict(csv_file)
 
-def merge_binary():
+def sortfunc():
     tempdict = []
     tempdict.append([data["1"]["Player"],data["1"]['PTS']])
-    for i in range(len(data)):
+    for i in range(2,len(data)):
         current = [data[f"{i+1}"]["Player"],data[f"{i+1}"]["PTS"]]
-        if current in tempdict:
-            pass
-        else:
-            spot = binary_spot_search(current, tempdict)
-            tempdict.insert(spot, current)
+        spot = binary_spot_search(current, tempdict)
+        tempdict.insert(spot, current)
     main(tempdict)
 
 def binary_spot_search(value, dict):
@@ -100,4 +97,4 @@ def main(dict):
             print("Player not found")
             input(">>> ")
             main(dict)
-merge_binary()
+sortfunc()
